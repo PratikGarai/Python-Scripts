@@ -26,6 +26,7 @@ for spl in spls :
     tagger.predict(sentence)
     for i, e in enumerate(sentence.get_spans()):
         s.add((e.token, e.tag))
+    print("Processed : ", spl)
 
 df = pd.DataFrame(list(s))
 df.columns = ["token", "tag"]
